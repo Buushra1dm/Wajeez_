@@ -32,8 +32,8 @@ with open('svm_model.pkl', 'rb') as f:
     model_classify = pickle.load(f)
 
 
-model = AutoModelForSeq2SeqLM.from_pretrained("AraT5/model")
-tokenizer  = AutoTokenizer.from_pretrained('AraT5/tokenizer',use_fast=False)
+model = AutoModelForSeq2SeqLM.from_pretrained("bushra1dajam/Wajeez_model")
+tokenizer = AutoTokenizer.from_pretrained('bushra1dajam/Wajeez_model',use_fast=False)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
